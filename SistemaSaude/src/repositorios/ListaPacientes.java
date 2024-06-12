@@ -54,4 +54,17 @@ public class ListaPacientes {
         System.out.println("Paciente atualizado");
     }
 
+    public ListaPacientes() {
+    }
+
+
+    public static ArrayList<Paciente> getPacientes() {
+        return pacientes;
+    }
+
+    public static void setPacientes(ArrayList<Paciente> pacientes) {
+        ListaPacientes.pacientes = pacientes;
+    }
+
+
 }
