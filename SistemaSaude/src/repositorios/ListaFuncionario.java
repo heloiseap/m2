@@ -1,6 +1,7 @@
 package repositorios;
 
 import entidades.Funcionario;
+import entidades.Paciente;
 
 import java.util.ArrayList;
 
@@ -11,13 +12,19 @@ public class ListaFuncionario {
         funcionarios = new ArrayList<>();
     }
 
-    public void listar(){}
+    public static void listar(){
+        System.out.println("Funcionários cadastrados: ");
+
+        for (Funcionario funcionario : funcionarios) {
+            System.out.println(funcionarios.indexOf(funcionario) + "-" + funcionario.nome);
+        }
+    }
 
     public Funcionario buscarPorId(int id){
         return ListaFuncionario.funcionarios.get(id);
     }
 
-    public void adicionar(Funcionario funcionario){
+    public static void adicionar(Funcionario funcionario){
         funcionarios.add(funcionario);
     }
 

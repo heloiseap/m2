@@ -11,13 +11,18 @@ public class ListaNutricionistas {
         nutricionistas = new ArrayList<>();
     }
 
-    private void adicionar(Nutricionista nutricionista){
+    public static void adicionar(Nutricionista nutricionista){
         nutricionistas.add(nutricionista);
     }
 
 
-    public void listar(){}
+    public static void listar(){
+        System.out.println("Nutricionistas: ");
 
+        for (Nutricionista nutricionista : nutricionistas) {
+            System.out.println(nutricionistas.indexOf(nutricionista) + "-" + nutricionista.nome);
+        }
+    }
     public Nutricionista buscarPorId(int id){
         return ListaNutricionistas.nutricionistas.get(id);
     }

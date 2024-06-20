@@ -37,4 +37,14 @@ public class Funcionario {
     public void setSalario(Double salario) {
         this.salario = salario;
     }
+
+    public Funcionario(String nome, int idade, Endereco endereco, Double salario) {
+        this.nome = nome;
+        this.idade = idade;
+        this.endereco = endereco;
+        this.salario = salario;
+    }
+
+    public Funcionario() {
+    }
 }

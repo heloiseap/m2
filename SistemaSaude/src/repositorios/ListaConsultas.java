@@ -15,20 +15,21 @@ public class ListaConsultas {
         consultas = new ArrayList<>();
     }
 
-    public void listar(){
+    public static void listar(){
         for (Consulta consulta: consultas){
             System.out.println("Consulta " + consultas.indexOf(consulta) + ": \n" );
             System.out.println("Data e hora: " + consulta.dataEHora);
             System.out.println("Nutricionista: " + consulta.nomeNutricionista);
             System.out.println("Paciente: " + consulta.nomePaciente);
+            System.out.println("Realizada? " + consulta.consultaRealizada + "\n");
         }
     }
 
-    public Consulta buscarPorId(int id){
+    public static Consulta buscarPorId(int id){
         return consultas.get(id);
     }
 
-    public void adicionar(Consulta consulta){
+    public static void adicionar(Consulta consulta){
         consultas.add(consulta);
         for (Nutricionista nutricionista : nutricionistas){
             if (nutricionista.nome.equals(consulta.nomeNutricionista))

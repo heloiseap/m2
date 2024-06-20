@@ -35,6 +35,9 @@ public class Nutricionista extends Funcionario {
         return certificados;
     }
 
+    public Nutricionista() {
+    }
+
     public void setCertificados(ArrayList<String> certificados) {
         this.certificados = certificados;
     }
